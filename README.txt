@@ -2,21 +2,14 @@ Hi There!
 
 You can use this includes folder to start your own projects quicker and easier.
 
-I've included an extension system for creating responsive widths.  Simply extend a selector
-with a placeholder in the following fractional syntax in the base stylesheet.
+I've included an extension system for creating responsive widths.  Simply extend a selector with a placeholder in the following fractional syntax in the base stylesheet.
 
 ex: 
 .class {
 	@extend %one-two;
 }
 
-In the preceeding placeholder, the first number ('one') corresponds to the numerator, while
-the second ('two') corresponds to the denominator.  These fractions refer to the width of the
-parent container that it will occupy at a resolution equal to or greater than 1024px width.
-Mobile widths are addressed as well.  Fractions up to denominator ten can be used in this
-format.  Only the most simplified version of a fraction will work.  This means that %one-two
-will create an element with width 50%, while %five-ten will do nothing (most likely it will
-produce an error).
+In the preceeding placeholder, the first number ('one') corresponds to the numerator, while the second ('two') corresponds to the denominator. These fractions refer to the width of the parent container that it will occupy at a resolution equal to or greater than 1024px width. Mobile widths are addressed as well. Fractions up to denominator ten can be used in this format. Only the most simplified version of a fraction will work.  This means that %one-two will create an element with width 50%, while %five-ten will do nothing (most likely it will produce an error).
 
 Other Shortcuts:
 
