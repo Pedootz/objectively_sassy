@@ -1,22 +1,17 @@
 Hi There!
 
-You can use this includes folder to start your own projects quicker and easier.
+You can use this includes folder to start your own projects more quickly and easily.
 
-I've included an extension system for creating responsive widths.  Simply extend a selector with a placeholder in the following fractional syntax in the base stylesheet.
+*SASS*
 
-ex: 
-.class {
-	@extend %one-two;
-}
+The SASS system has been completely overhauled in structure to provide a more modular and reusable experience.  Everything starts in ./sass/style.scss.  Linked to from this stylesheet are global variables ('./sass/library/_global_vars.scss') and mixins (./sass/library/_mixins.scss).  From there, CSS is included by creating new *segments*.  Simply copy the example segment (./sass/segments/example) and rename the folder (ex. header or sidebar or checkout).  This will represent a cohesive section or segment of your site.  Your CSS will eventually consist of the sum of your distinct segments.  After renaming your new segment, include the _index in your main style.scss and start defining styles in ./sass/segments/{segment name}/_base.scss.  If your segment is repsponsive, uncomment the responsive includes in your _index.scss and use the responsive sheets located in ./sass/segments/{segment name}/res.
 
-In the preceeding placeholder, the first number ('one') corresponds to the numerator, while the second ('two') corresponds to the denominator. These fractions refer to the width of the parent container that it will occupy at a resolution equal to or greater than 1024px width. Mobile widths are addressed as well. Fractions up to denominator ten can be used in this format. Only the most simplified version of a fraction will work.  This means that %one-two will create an element with width 50%, while %five-ten will do nothing (most likely it will produce an error).
+Some documentation about mixins:
 
-Other Shortcuts:
-
-@include box-sizing($area) 
+@include box-sizing($area)
 
 //  $area - can accept either border, padding, or content;
-\\  This mixin will apply the specified box sizing to the element, 
+\\  This mixin will apply the specified box sizing to the element,
 \\  along with the needed vendor prefixes to support all browsers;
 
 @include align($direction)
@@ -35,3 +30,10 @@ Other Shortcuts:
 @extend %margin-auto
 
 \\  Applies margin-left: auto; and margin-right: auto; to an element;
+
+@extend %rotate
+
+\\  Rotates stuff
+\\  $deg is number of degrees to rotate.
+\\  $xtrans is distance to move x axis
+\\  $ytrans is distance to move y axis

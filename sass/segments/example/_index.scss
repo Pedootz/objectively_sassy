@@ -1,0 +1,37 @@
+/*
+ *  NAME
+ *  DESCRIPTION
+ */
+
+@import 'misc/_delete';
+@import 'misc/_local_vars';
+@import '_base';
+
+//Responsive Styles - Uncomment for responsive modules
+/*
+@media only screen and (min-width : 480px){
+    @import 'res/_480up';
+}
+@media only screen and (min-width : 768px){
+    @import 'res/_768up';
+}
+@media only screen and (min-width : 1024px){
+    @import 'res/_1024up';
+}
+@media only screen and (min-width : 1280px){
+    @import 'res/_1280up';
+}
+@media only screen and (min-width : 1600px){
+    @import 'res/_1600up';
+}
+.ie8 {
+    @import '_ie8';
+}
+*/
+
+//Print Styles - Uncomment for print styles
+/*
+@media only print {
+    @import 'misc/_print';
+}
+*/
