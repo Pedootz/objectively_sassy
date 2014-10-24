@@ -10,7 +10,7 @@
 //Reset and variables
 @include global-reset;
 @import 'library/_mixins';
-@import 'library/_local_vars';
+@import 'library/_global_vars';
 
 //Import Components
 @import 'segments/example/_index';
